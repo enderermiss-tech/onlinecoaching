@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anlık Koç — Gerçek Zamanlı Temsilci Koçluğu</title>
+  <meta name="description" content="Tahsilat, müşteri hizmetleri, satış sonrası ve satış ekipleri için görüşme sırasında anlık iletişim önerileri." />
+  <style>
+    :root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--blue:#163a63;--blue2:#244f7f;--white:#fff;--ok:#166534;--warn:#92400e}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#f5f7fa;line-height:1.5}
+    .wrap{max-width:1180px;margin:auto;padding:0 22px}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-weight:800;font-size:20px;letter-spacing:-.02em}.tag{font-size:12px;color:#fff;background:var(--blue);padding:5px 9px;border-radius:999px;margin-left:8px}.nav a{color:var(--ink);text-decoration:none;font-size:14px}.navlinks{display:flex;gap:20px;align-items:center}.btn{appearance:none;border:0;border-radius:12px;padding:13px 18px;font-weight:700;cursor:pointer;background:var(--blue);color:#fff}.btn.secondary{background:#fff;color:var(--blue);border:1px solid var(--line)}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;padding:64px 0 54px}.eyebrow{font-size:13px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.12em}.hero h1{font-size:54px;line-height:1.02;letter-spacing:-.045em;margin:14px 0 20px}.hero p{font-size:19px;color:var(--muted);max-width:650px}.heroactions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;color:var(--muted);font-size:13px}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 18px 60px rgba(15,23,42,.08)}.paneltitle{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}.live{font-size:12px;font-weight:800;color:var(--ok);background:#ecfdf5;padding:6px 9px;border-radius:999px}
+    .steps{display:grid;gap:12px}.field label{display:block;font-size:12px;font-weight:800;margin-bottom:7px}.field select,.field textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;color:var(--ink)}.field textarea{min-height:84px;resize:vertical}.result{display:none;margin-top:16px;padding:18px;border-radius:14px;background:#f1f5f9;border-left:4px solid var(--blue)}.result strong{display:block;margin-bottom:6px}.coachnote{font-size:13px;color:var(--muted);margin-top:10px}.usage{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
+    section{padding:66px 0}.sectionhead{max-width:760px;margin-bottom:30px}.sectionhead h2{font-size:38px;letter-spacing:-.03em;margin:0 0 10px}.sectionhead p{color:var(--muted);font-size:17px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.card h3{margin-top:0}.card p{color:var(--muted)}.num{font-size:12px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price{font-size:38px;font-weight:850;letter-spacing:-.04em}.price small{font-size:13px;color:var(--muted);font-weight:600}.featured{border:2px solid var(--blue);position:relative}.ribbon{position:absolute;right:16px;top:16px;background:var(--blue);color:#fff;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800}.features{padding:0;list-style:none;color:var(--muted);font-size:14px}.features li{padding:8px 0;border-bottom:1px solid var(--line)}.features li:last-child{border:0}.cta{background:var(--blue);color:#fff;border-radius:24px;padding:38px;display:flex;justify-content:space-between;gap:28px;align-items:center}.cta p{color:#dbeafe;max-width:720px}.cta .btn{background:#fff;color:var(--blue)}footer{padding:35px 0 50px;color:var(--muted);font-size:13px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.hero h1{font-size:44px}.grid3,.pricing{grid-template-columns:1fr}.navlinks a{display:none}.cta{display:block}.cta .btn{margin-top:12px}}
+    @media(max-width:540px){.hero{padding-top:36px}.hero h1{font-size:37px}.wrap{padding:0 16px}.panel{padding:18px}.sectionhead h2{font-size:31px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brand">Anlık Koç <span class="tag">BETA</span></div>
+      <div class="navlinks"><a href="#nasil">Nasıl çalışır?</a><a href="#paketler">Paketler</a><button class="btn" id="navTry">Ücretsiz dene</button></div>
+    </nav>
+
+    <main class="hero">
+      <div>
+        <div class="eyebrow">Gerçek Zamanlı Temsilci Koçluğu</div>
+        <h1>Görüşmenin en kritik anında, temsilcinin yanında.</h1>
+        <p>Tahsilat, müşteri hizmetleri, satış sonrası ve satış ekipleri için; müşterinin itirazına, duygusuna ve görüşme hedefine göre saniyeler içinde uygulanabilir iletişim önerileri.</p>
+        <div class="heroactions"><button class="btn" id="heroTry">4 ücretsiz öneriyi dene</button><a class="btn secondary" href="#paketler">Paketleri incele</a></div>
+        <div class="trust"><span>✓ Prompt yazmaya gerek yok</span><span>✓ 10–15 saniyelik kullanım akışı</span><span>✓ Yönetici ekipleri için ölçeklenebilir</span></div>
+      </div>
+
+      <aside class="panel" id="demo">
+        <div class="paneltitle"><div><strong>Şimdi Ne Söylemeliyim?</strong><div style="font-size:13px;color:var(--muted)">Görüşme destek ekranı</div></div><span class="live">● Hazır</span></div>
+        <form id="coachForm" class="steps">
+          <div class="field"><label>1. Çalışma alanın</label><select id="area"><option>Tahsilat</option><option>Müşteri Hizmetleri</option><option>Satış Sonrası Hizmetler</option><option>Satış</option></select></div>
+          <div class="field"><label>2. Müşteri şu anda ne söylüyor?</label><textarea id="customer" required placeholder="Örn: Şu anda ödeme yapamam, sürekli aranmak istemiyorum."></textarea></div>
+          <div class="field"><label>3. Müşterinin tutumu</label><select id="mood"><option>İtiraz ediyor</option><option>Öfkeli</option><option>Kararsız</option><option>Erteliyor</option><option>Bilgi istiyor</option></select></div>
+          <div class="field"><label>4. Görüşmede hedefin</label><select id="goal"><option>Net bir sonraki adımı belirlemek</option><option>Ödeme sözü almak</option><option>Müşteriyi sakinleştirmek</option><option>İtirazı çözmek</option><option>Randevu / geri dönüş tarihi almak</option></select></div>
+          <button class="btn" type="submit">Bana öneri ver</button>
+        </form>
+        <div class="result" id="result" aria-live="polite"><strong>Şimdi şöyle söyle:</strong><div id="answer"></div><div class="coachnote" id="why"></div></div>
+        <div class="usage" id="usage">Deneme hakkı: 4 / 4</div>
+      </aside>
+    </main>
+  </div>
+
+  <section id="nasil"><div class="wrap"><div class="sectionhead"><h2>Temsilciye uzun eğitim değil, doğru anda doğru cümle.</h2><p>Uygulama, temsilcinin görüşmeyi bırakmadan birkaç seçim yapıp doğrudan uygulanabilir bir iletişim önerisi alacağı şekilde tasarlandı.</p></div><div class="grid3">
+    <div class="card"><div class="num">01 · Durumu tanımla</div><h3>3–4 kısa cevap</h3><p>Alan, müşteri tutumu, söylenen ifade ve görüşme hedefi seçilir. Serbest prompt yazmaya gerek kalmaz.</p></div>
+    <div class="card"><div class="num">02 · Anlık koçluk</div><h3>“Şimdi şöyle söyle”</h3><p>Sistem uzun teori yerine kullanılabilir cümle, soru veya yönlendirme üretir. Altında kısa bir “neden” notu yer alır.</p></div>
+    <div class="card"><div class="num">03 · Öğrenen sistem</div><h3>Yönetici içgörüsü</h3><p>Kurumsal sürümde hangi itirazların tekrarlandığı ve ekiplerin hangi iletişim alanlarında desteğe ihtiyaç duyduğu raporlanabilir.</p></div>
+  </div></div></section>
+
+  <section style="background:#fff"><div class="wrap"><div class="sectionhead"><h2>Kimler için?</h2><p>Müşteriyle gerçek zamanlı iletişim kuran ve sonuç üretmesi beklenen ekipler için.</p></div><div class="grid3">
+    <div class="card"><h3>Tahsilat ekipleri</h3><p>Ödeme itirazı, erteleme, savunma, öfke ve taahhüt alma anlarında iletişim desteği.</p></div>
+    <div class="card"><h3>Müşteri hizmetleri & SSH</h3><p>Şikâyet, gecikme, ürün problemi ve memnuniyetsizlik görüşmelerinde güveni koruyan yanıtlar.</p></div>
+    <div class="card"><h3>Takım liderleri & yöneticiler</h3><p>Temsilci gelişimini tek tek dinlemelerin ötesine taşıyan ortak bir koçluk standardı.</p></div>
+  </div></div></section>
+
+  <section id="paketler"><div class="wrap"><div class="sectionhead"><h2>Kullandığın kadar değil, geliştikçe değer üreten paketler.</h2><p>Beta fiyatlandırması. Kurumsal plan ekip büyüklüğüne ve raporlama ihtiyacına göre özelleştirilir.</p></div><div class="pricing">
+    <div class="card"><h3>Deneme</h3><div class="price">0 TL</div><ul class="features"><li>4 koçluk önerisi</li><li>Tüm çalışma alanları</li><li>Temel öneri motoru</li></ul><button class="btn secondary priceTry">Ücretsiz dene</button></div>
+    <div class="card featured"><span class="ribbon">Önerilen</span><h3>Bireysel</h3><div class="price">250 TL <small>+ KDV / kişi / ay</small></div><ul class="features"><li>100 öneri / ay</li><li>Kişisel kullanım geçmişi</li><li>Gelişmiş senaryo önerileri</li></ul><button class="btn" data-plan="Bireysel">Paketi seç</button></div>
+    <div class="card"><h3>Kurumsal</h3><div class="price">Teklif <small>/ ekip</small></div><ul class="features"><li>Ekip hesabı ve yönetici paneli</li><li>Kullanım / gelişim raporları</li><li>Kuruma özel iletişim standartları</li></ul><button class="btn secondary" data-plan="Kurumsal">Kurumsal bilgi al</button></div>
+  </div></div></section>
+
+  <section><div class="wrap"><div class="cta"><div><h2 style="margin:0 0 8px;font-size:32px">Eğitim bittiğinde koçluk bitmesin.</h2><p>Gerçek Zamanlı Temsilci Koçluğu, öğrenilen iletişim yaklaşımını görüşmenin içine taşıyarak temsilciyi ihtiyaç duyduğu anda desteklemek için tasarlanıyor.</p></div><button class="btn" id="ctaTry">Beta sürümü dene</button></div></div></section>
+
+  <footer><div class="wrap">© 2026 Anlık Koç · Gerçek Zamanlı Temsilci Koçluğu · Beta MVP</div></footer>
+
+  <script>
+    const form=document.getElementById('coachForm'), result=document.getElementById('result'), answer=document.getElementById('answer'), why=document.getElementById('why'), usage=document.getElementById('usage');
+    let remaining=4;
+    const scrollDemo=()=>document.getElementById('demo').scrollIntoView({behavior:'smooth',block:'center'});
+    ['navTry','heroTry','ctaTry'].forEach(id=>document.getElementById(id)?.addEventListener('click',scrollDemo));
+    document.querySelectorAll('.priceTry').forEach(b=>b.addEventListener('click',scrollDemo));
+    document.querySelectorAll('[data-plan]').forEach(b=>b.addEventListener('click',()=>alert(b.dataset.plan+' paket talebi beta kayıt listesine eklenecek.')));
+
+    function buildReply(area,mood,goal,text){
+      const normalized=text.toLocaleLowerCase('tr-TR');
+      let line='', note='';
+      if(area==='Tahsilat'){
+        if(mood==='Öfkeli'){ line='“Sizi rahatsız eden kısmı netleştirelim. Önce sizi dinleyeyim; ardından bugün çözebileceğimiz tek noktayı birlikte belirleyelim.”'; note='Koçluk notu: Önce gerilimi düşürür, ardından görüşmeyi tek ve yönetilebilir bir hedefe taşır.'; }
+        else if(normalized.includes('öde')||normalized.includes('para')||mood==='Erteliyor'){ line='“Bugün ödeme yapmanın zor olduğunu anlıyorum. O halde gerçekçi olmayan bir söz istemek yerine, sizin için mümkün olan tarihi birlikte netleştirelim. Hangi tarih daha gerçekçi?”'; note='Koçluk notu: İtirazla mücadele etmek yerine kontrol duygusu verir ve müşteriyi somut bir sonraki adıma yönlendirir.'; }
+        else { line='“Konuyu birlikte netleştirelim. Şu an sizin için çözülmesi gereken en önemli nokta hangisi? Oradan başlayalım ve görüşmenin sonunda net bir sonraki adım belirleyelim.”'; note='Koçluk notu: Açık uçlu soru, direncin kaynağını görünür hale getirir.'; }
+      } else if(area==='Müşteri Hizmetleri'||area==='Satış Sonrası Hizmetler'){
+        if(mood==='Öfkeli'){ line='“Yaşadığınız durumun sizi neden rahatsız ettiğini anlıyorum. Önce sorunu doğru anladığımdan emin olayım; ardından size şu anda sunabileceğim en hızlı çözümü paylaşacağım.”'; note='Koçluk notu: Savunma yerine doğrulama ve süreç kontrolü sağlar.'; }
+        else { line='“Beklentinizi doğru karşılayabilmem için bir noktayı netleştireyim: Sizin için ideal çözüm nasıl görünürdü? Buna en yakın seçeneği birlikte belirleyelim.”'; note='Koçluk notu: Müşterinin gerçek beklentisini ortaya çıkarıp çözüm alanını daraltır.'; }
+      } else {
+        if(mood==='Kararsız'||mood==='İtiraz ediyor'){ line='“Karar vermenizi zorlaştıran tek noktayı belirleyebilsek, bu hangisi olurdu? Önce onu netleştirelim; sonra sizin için gerçekten uygun olup olmadığına birlikte bakalım.”'; note='Koçluk notu: Satış baskısını azaltır, itirazın kök nedenini ortaya çıkarır.'; }
+        else { line='“Sizin için doğru seçeneği önerebilmem adına hedefinizi netleştireyim. Bu görüşmenin sonunda hangi sonucu elde etmiş olursanız ‘evet, aradığım buydu’ dersiniz?”'; note='Koçluk notu: Ürün anlatımından önce ihtiyacı tanımlar.'; }
+      }
+      if(goal==='Müşteriyi sakinleştirmek') note+=' Öncelik sonuç almaktan önce duygusal tansiyonu düşürmektir.';
+      return {line,note};
+    }
+
+    form.addEventListener('submit',e=>{
+      e.preventDefault();
+      if(remaining<=0){ result.style.display='block';answer.textContent='Ücretsiz deneme hakkın tamamlandı. Bireysel veya kurumsal pakete geçerek devam edebilirsin.';why.textContent='';return; }
+      const area=document.getElementById('area').value, mood=document.getElementById('mood').value, goal=document.getElementById('goal').value, text=document.getElementById('customer').value.trim();
+      if(!text) return;
+      const r=buildReply(area,mood,goal,text); answer.textContent=r.line; why.textContent=r.note; result.style.display='block'; remaining--; usage.textContent='Deneme hakkı: '+remaining+' / 4';
+    });
+  </script>
+</body>
+</html>
